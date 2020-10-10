@@ -1,0 +1,6 @@
+framework module Pods_Offers_OffersUITests {
+  umbrella header "Pods-Offers-OffersUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
