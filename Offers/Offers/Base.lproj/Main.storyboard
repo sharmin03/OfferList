@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zEn-3s-GcY">
-                                <rect key="frame" x="8" y="386" width="398" height="134"/>
+                                <rect key="frame" x="8" y="363" width="398" height="180"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="g2h-4o-vtL">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -67,6 +67,13 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jk-eD-TS5">
+                                        <rect key="frame" x="0.0" y="150" width="398" height="30"/>
+                                        <state key="normal" title="Get Offers"/>
+                                        <connections>
+                                            <action selector="getOffersButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oql-b2-JGX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -78,6 +85,12 @@
                             <constraint firstItem="zEn-3s-GcY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="x7X-uG-yEg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="appIdTextField" destination="mc8-Xy-5qg" id="Ct0-Ft-qxf"/>
+                        <outlet property="getOffersButton" destination="2Jk-eD-TS5" id="c7V-Jb-AYC"/>
+                        <outlet property="securityTokenTextField" destination="7L9-Fv-ecN" id="GQa-M5-btg"/>
+                        <outlet property="userIdTextField" destination="tFB-YL-TCi" id="FVd-GA-4NK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
