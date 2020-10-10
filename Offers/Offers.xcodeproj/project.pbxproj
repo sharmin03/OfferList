@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69C06EB2928C35576E1FF502 /* Pods_Offers_OffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D5E805F14B2D51320A41C3 /* Pods_Offers_OffersUITests.framework */; };
-		71832F38D32B1D240EBA58B2 /* Pods_OffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D536E74BA34FF1776C322FF8 /* Pods_OffersTests.framework */; };
+		0140CE91C5ECAA7972EA585E /* Pods_OffersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855993DA86284B1AD444DE75 /* Pods_OffersTests.framework */; };
+		05F9D140679EBF1B11250AC8 /* Pods_Offers_OffersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CA8080FDED470C41F27897 /* Pods_Offers_OffersUITests.framework */; };
 		8A379B4F2531F69B0022307C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B4E2531F69B0022307C /* AppDelegate.m */; };
 		8A379B522531F69B0022307C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B512531F69B0022307C /* SceneDelegate.m */; };
 		8A379B582531F69B0022307C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A379B562531F69B0022307C /* Main.storyboard */; };
@@ -19,7 +19,7 @@
 		8A379B752531F69D0022307C /* OffersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B742531F69D0022307C /* OffersUITests.m */; };
 		8A379B892531F8380022307C /* OfferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B882531F8380022307C /* OfferModel.m */; };
 		8A379B9C253207930022307C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B9A253207930022307C /* ViewController.m */; };
-		B90EEE49B585C192A171DADF /* Pods_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94AFA86602C7781828A5FB67 /* Pods_Offers.framework */; };
+		B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA8D46976DFB7CE046354B /* Pods_Offers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		315AFF3EF27C00D80778F311 /* Pods-Offers-OffersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.release.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5070C6F3A858DE2256994487 /* Pods-OffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.release.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.release.xcconfig"; sourceTree = "<group>"; };
-		65BF2787179B3A3B190A4959 /* Pods-OffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.debug.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		77D5E805F14B2D51320A41C3 /* Pods_Offers_OffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offers_OffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10CA8080FDED470C41F27897 /* Pods_Offers_OffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offers_OffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E00D95C0A31D7471F2F31 /* Pods-Offers-OffersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.release.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6DE9C3CB2C44A1762C93C79D /* Pods-Offers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.release.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.release.xcconfig"; sourceTree = "<group>"; };
+		70AA8D46976DFB7CE046354B /* Pods_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855993DA86284B1AD444DE75 /* Pods_OffersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OffersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89FE2F36AEE3F240FFCFBB7E /* Pods-OffersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.release.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A379B4A2531F69B0022307C /* Offers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Offers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A379B4D2531F69B0022307C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A379B4E2531F69B0022307C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,11 +66,9 @@
 		8A379B902531FCC80022307C /* OfferModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferModel.h; sourceTree = "<group>"; };
 		8A379B9A253207930022307C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A379B9B253207930022307C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		94AFA86602C7781828A5FB67 /* Pods_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D536E74BA34FF1776C322FF8 /* Pods_OffersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OffersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0109D48282B72BB5F1C8260 /* Pods-Offers-OffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FAAD8843D12378AAEE69A02B /* Pods-Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.debug.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.debug.xcconfig"; sourceTree = "<group>"; };
-		FAB8C9717622078FB29625E9 /* Pods-Offers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.release.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.release.xcconfig"; sourceTree = "<group>"; };
+		AE9FF4B7C0F9B6A77C84E78E /* Pods-Offers-OffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C98BCD7D136D34A83D170575 /* Pods-Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.debug.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.debug.xcconfig"; sourceTree = "<group>"; };
+		FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.debug.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B90EEE49B585C192A171DADF /* Pods_Offers.framework in Frameworks */,
+				B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71832F38D32B1D240EBA58B2 /* Pods_OffersTests.framework in Frameworks */,
+				0140CE91C5ECAA7972EA585E /* Pods_OffersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,21 +92,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69C06EB2928C35576E1FF502 /* Pods_Offers_OffersUITests.framework in Frameworks */,
+				05F9D140679EBF1B11250AC8 /* Pods_Offers_OffersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B4DBEF5B74B450E26DDF213 /* Frameworks */ = {
+		21BEF0C42B2D9E2EB0621276 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94AFA86602C7781828A5FB67 /* Pods_Offers.framework */,
-				77D5E805F14B2D51320A41C3 /* Pods_Offers_OffersUITests.framework */,
-				D536E74BA34FF1776C322FF8 /* Pods_OffersTests.framework */,
+				70AA8D46976DFB7CE046354B /* Pods_Offers.framework */,
+				10CA8080FDED470C41F27897 /* Pods_Offers_OffersUITests.framework */,
+				855993DA86284B1AD444DE75 /* Pods_OffersTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3176A72DE988D5B2C8F95112 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C98BCD7D136D34A83D170575 /* Pods-Offers.debug.xcconfig */,
+				6DE9C3CB2C44A1762C93C79D /* Pods-Offers.release.xcconfig */,
+				AE9FF4B7C0F9B6A77C84E78E /* Pods-Offers-OffersUITests.debug.xcconfig */,
+				3E4E00D95C0A31D7471F2F31 /* Pods-Offers-OffersUITests.release.xcconfig */,
+				FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */,
+				89FE2F36AEE3F240FFCFBB7E /* Pods-OffersTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		8A379B412531F69B0022307C = {
@@ -116,8 +130,8 @@
 				8A379B682531F69D0022307C /* OffersTests */,
 				8A379B732531F69D0022307C /* OffersUITests */,
 				8A379B4B2531F69B0022307C /* Products */,
-				9F000F04129D5AAF4233A3F3 /* Pods */,
-				3B4DBEF5B74B450E26DDF213 /* Frameworks */,
+				3176A72DE988D5B2C8F95112 /* Pods */,
+				21BEF0C42B2D9E2EB0621276 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,19 +213,6 @@
 			children = (
 			);
 			path = NetworkManager;
-			sourceTree = "<group>";
-		};
-		9F000F04129D5AAF4233A3F3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FAAD8843D12378AAEE69A02B /* Pods-Offers.debug.xcconfig */,
-				FAB8C9717622078FB29625E9 /* Pods-Offers.release.xcconfig */,
-				E0109D48282B72BB5F1C8260 /* Pods-Offers-OffersUITests.debug.xcconfig */,
-				315AFF3EF27C00D80778F311 /* Pods-Offers-OffersUITests.release.xcconfig */,
-				65BF2787179B3A3B190A4959 /* Pods-OffersTests.debug.xcconfig */,
-				5070C6F3A858DE2256994487 /* Pods-OffersTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,7 +625,7 @@
 		};
 		8A379B7A2531F69D0022307C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAAD8843D12378AAEE69A02B /* Pods-Offers.debug.xcconfig */;
+			baseConfigurationReference = C98BCD7D136D34A83D170575 /* Pods-Offers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -645,7 +646,7 @@
 		};
 		8A379B7B2531F69D0022307C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAB8C9717622078FB29625E9 /* Pods-Offers.release.xcconfig */;
+			baseConfigurationReference = 6DE9C3CB2C44A1762C93C79D /* Pods-Offers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -666,7 +667,7 @@
 		};
 		8A379B7D2531F69D0022307C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65BF2787179B3A3B190A4959 /* Pods-OffersTests.debug.xcconfig */;
+			baseConfigurationReference = FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -687,7 +688,7 @@
 		};
 		8A379B7E2531F69D0022307C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5070C6F3A858DE2256994487 /* Pods-OffersTests.release.xcconfig */;
+			baseConfigurationReference = 89FE2F36AEE3F240FFCFBB7E /* Pods-OffersTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -708,7 +709,7 @@
 		};
 		8A379B802531F69D0022307C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0109D48282B72BB5F1C8260 /* Pods-Offers-OffersUITests.debug.xcconfig */;
+			baseConfigurationReference = AE9FF4B7C0F9B6A77C84E78E /* Pods-Offers-OffersUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U2D95CPQGW;
@@ -727,7 +728,7 @@
 		};
 		8A379B812531F69D0022307C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 315AFF3EF27C00D80778F311 /* Pods-Offers-OffersUITests.release.xcconfig */;
+			baseConfigurationReference = 3E4E00D95C0A31D7471F2F31 /* Pods-Offers-OffersUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U2D95CPQGW;
