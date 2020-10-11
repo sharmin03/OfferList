@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *getOffersButton;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 
 @end

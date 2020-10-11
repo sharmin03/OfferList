@@ -76,17 +76,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-jl-juq">
+                                <rect key="frame" x="182" y="450" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="K4h-mK-ynm"/>
+                                    <constraint firstAttribute="height" constant="50" id="qnm-Yp-RGa"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zEn-3s-GcY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GBA-01-NBn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zEn-3s-GcY" secondAttribute="trailing" constant="8" id="k8M-s7-8Fq"/>
+                            <constraint firstItem="ft6-jl-juq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pRc-IY-VI2"/>
                             <constraint firstItem="zEn-3s-GcY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="x7X-uG-yEg"/>
+                            <constraint firstItem="ft6-jl-juq" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ztr-4s-CWp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="wlI-ah-0og"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ft6-jl-juq" id="UAC-S2-9ID"/>
                         <outlet property="appIdTextField" destination="mc8-Xy-5qg" id="Ct0-Ft-qxf"/>
                         <outlet property="getOffersButton" destination="2Jk-eD-TS5" id="c7V-Jb-AYC"/>
                         <outlet property="securityTokenTextField" destination="7L9-Fv-ecN" id="GQa-M5-btg"/>
