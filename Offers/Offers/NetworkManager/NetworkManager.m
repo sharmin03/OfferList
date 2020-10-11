@@ -14,28 +14,38 @@
 
 @implementation NetworkManager
 
-NSString *baseUrl = @"https://api.fyber.com/feed/v1/offers.json?";
+
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.baseUrl = @"https://api.fyber.com/feed/v1/offers.json?";
+        self.ip = [NSString stringWithFormat:@"%s%s", "&ip=", "109.235.143.113"];
+        self.locale = [NSString stringWithFormat:@"%s%s", "&locale=", "de"];
+        self.timestamp = [NSString stringWithFormat:@"%s%@", "&timestamp=", [NSString stringWithFormat:@"%lu", (long)[[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]] integerValue]]];
+        self.offerTypes = [NSString stringWithFormat:@"%s%s", "&offer_types=", "112"];
+        self.version = [NSString stringWithFormat:@"%s%@", "&phone_version=", [[UIDevice currentDevice] systemVersion]];
+        self.apple_idfa = [NSString stringWithFormat:@"%s%@", "&apple_idfa=", [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
+        self.idfaEnabled = [NSString stringWithFormat:@"%s%s", "&apple_idfa_tracking_enabled=", "true"];
+    }
+    return self;
+}
+
 
 -(void) loadData:(NSString *)aID userID:(NSString *) uId token:(NSString *) token completionHandler: (void (^)(NSArray<Offer *> * offers)) completionHandler {
     NSMutableArray<Offer *> *offers = NSMutableArray.new;
-    NSString *appId = [NSString stringWithFormat:@"%s%@", "appid=", aID];
-    NSString *userId = [NSString stringWithFormat:@"%s%@", "&uid=", userId];
-    NSString *securityToken = [NSString stringWithFormat:@"%@", token];
-    NSString *ip = [NSString stringWithFormat:@"%s%s", "&ip=", "109.235.143.113"];
-    NSString *locale = [NSString stringWithFormat:@"%s%s", "&locale=", "de"];
-    NSString *timestamp = [NSString stringWithFormat:@"%s%@", "&timestamp=", [NSString stringWithFormat:@"%lu", (long)[[NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]] integerValue]]];
-    NSString *offerTypes = [NSString stringWithFormat:@"%s%s", "&offer_types=", "112"];
-    NSString *version = [NSString stringWithFormat:@"%s%@", "&phone_version=", [[UIDevice currentDevice] systemVersion]];
-    NSString *apple_idfa = [NSString stringWithFormat:@"%s%@", "&apple_idfa=", [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString]];
-    NSString *idfaEnabled = [NSString stringWithFormat:@"%s%s", "&apple_idfa_tracking_enabled=", "true"];
-    NSString *apiKey = [NSString stringWithFormat:@"%@", securityToken];
-    NSString *gatheredParameters = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@", appId, apple_idfa, idfaEnabled, ip, locale, offerTypes, version, timestamp, userId, apiKey ];
-    NSString *hashKey = [NSString stringWithFormat:@"%s%@", "&hashkey=", [gatheredParameters SHA1]];
-    NSString *url = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@", baseUrl, appId, userId, ip, locale, timestamp, offerTypes, version, apple_idfa, idfaEnabled, hashKey ];
+    self.appId = [NSString stringWithFormat:@"%s%@", "appid=", aID];
+    self.userId = [NSString stringWithFormat:@"%s%@", "&uid=", uId];
+    self.securityToken = [NSString stringWithFormat:@"%@", token];
+    self.apiKey = [NSString stringWithFormat:@"%@", token];
+    self.gatheredParameters = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@", self.appId, self.apple_idfa, self.idfaEnabled, self.ip, self.locale, self.offerTypes, self.version, self.timestamp, self.userId, self.apiKey ];
+    self.hashKey = [NSString stringWithFormat:@"%s%@", "&hashkey=", [self.gatheredParameters SHA1]];
+    self.url = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@%@%@%@", self.baseUrl, self.appId, self.userId, self.ip, self.locale, self.timestamp, self.offerTypes, self.version, self.apple_idfa, self.idfaEnabled, self.hashKey ];
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
-    [request setURL:[NSURL URLWithString:url]];
+    [request setURL:[NSURL URLWithString:self.url]];
 
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
       ^(NSData * _Nullable data,

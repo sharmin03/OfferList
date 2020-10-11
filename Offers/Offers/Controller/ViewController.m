@@ -33,9 +33,9 @@
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
     NetworkManager *nw =  [[NetworkManager alloc] init];
+    
     [nw loadData:@"2070" userID:@"superman" token:@"&1c915e3b5d42d05136185030892fbb846c278927" completionHandler:^(NSArray<Offer *> * _Nonnull offers) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OffersViewController *offersVC = [storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"];
             offersVC.offers = offers;
@@ -45,7 +45,6 @@
     }];
 
 }
-
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [_appIdTextField resignFirstResponder];
