@@ -17,8 +17,10 @@
 		8A379B602531F69D0022307C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B5F2531F69D0022307C /* main.m */; };
 		8A379B6A2531F69D0022307C /* OffersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B692531F69D0022307C /* OffersTests.m */; };
 		8A379B752531F69D0022307C /* OffersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B742531F69D0022307C /* OffersUITests.m */; };
-		8A379B892531F8380022307C /* OfferModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B882531F8380022307C /* OfferModel.m */; };
 		8A379B9C253207930022307C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B9A253207930022307C /* ViewController.m */; };
+		8A379BCB253314C20022307C /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379BCA253314C20022307C /* OffersViewController.m */; };
+		8AE9884A2533305600BE6952 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988492533305600BE6952 /* Offer.m */; };
+		8AE988722533426500BE6952 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988712533426500BE6952 /* NetworkManager.m */; };
 		B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA8D46976DFB7CE046354B /* Pods_Offers.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +64,14 @@
 		8A379B702531F69D0022307C /* OffersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OffersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A379B742531F69D0022307C /* OffersUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersUITests.m; sourceTree = "<group>"; };
 		8A379B762531F69D0022307C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A379B882531F8380022307C /* OfferModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OfferModel.m; sourceTree = "<group>"; };
-		8A379B902531FCC80022307C /* OfferModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OfferModel.h; sourceTree = "<group>"; };
 		8A379B9A253207930022307C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A379B9B253207930022307C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8A379BCA253314C20022307C /* OffersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
+		8A379BCF253314D50022307C /* OffersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
+		8AE988482533305600BE6952 /* Offer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
+		8AE988492533305600BE6952 /* Offer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
+		8AE988702533426500BE6952 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		8AE988712533426500BE6952 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		AE9FF4B7C0F9B6A77C84E78E /* Pods-Offers-OffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C98BCD7D136D34A83D170575 /* Pods-Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.debug.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.debug.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +125,6 @@
 				FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */,
 				89FE2F36AEE3F240FFCFBB7E /* Pods-OffersTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -186,8 +191,8 @@
 		8A379B852531F8050022307C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8A379B882531F8380022307C /* OfferModel.m */,
-				8A379B902531FCC80022307C /* OfferModel.h */,
+				8AE988482533305600BE6952 /* Offer.h */,
+				8AE988492533305600BE6952 /* Offer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,6 +209,8 @@
 			children = (
 				8A379B9B253207930022307C /* ViewController.h */,
 				8A379B9A253207930022307C /* ViewController.m */,
+				8A379BCF253314D50022307C /* OffersViewController.h */,
+				8A379BCA253314C20022307C /* OffersViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,6 +218,8 @@
 		8A379BA025320CD10022307C /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				8AE988702533426500BE6952 /* NetworkManager.h */,
+				8AE988712533426500BE6952 /* NetworkManager.m */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -452,7 +461,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A379B892531F8380022307C /* OfferModel.m in Sources */,
+				8AE9884A2533305600BE6952 /* Offer.m in Sources */,
+				8AE988722533426500BE6952 /* NetworkManager.m in Sources */,
+				8A379BCB253314C20022307C /* OffersViewController.m in Sources */,
 				8A379B4F2531F69B0022307C /* AppDelegate.m in Sources */,
 				8A379B602531F69D0022307C /* main.m in Sources */,
 				8A379B522531F69B0022307C /* SceneDelegate.m in Sources */,
