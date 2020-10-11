@@ -13,27 +13,40 @@
 
 @implementation OffersUITests
 
-- (void)setUp {
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+XCUIApplication *app;
 
-    // In UI tests it is usually best to stop immediately when a failure occurs.
+- (void)setUp {
     self.continueAfterFailure = NO;
 
-    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    app = [[XCUIApplication alloc] init];
+    [app launch];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
 }
 
-- (void)testExample {
-    // UI tests must launch the application that they test.
-    XCUIApplication *app = [[XCUIApplication alloc] init];
-    [app launch];
+- (void)testUserForm {
+    
+    [[[[[[[[[[[app.windows childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeTextField].element tap];
+    
+    
+    
+    XCUIElement *element2 = [[[[[[[[app childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element;
+    XCUIElement *element = [element2 childrenMatchingType:XCUIElementTypeOther].element;
+    [[[[element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1] childrenMatchingType:XCUIElementTypeTextField].element tap];
+    
+    [[[[element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:2] childrenMatchingType:XCUIElementTypeTextField].element tap];
 
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [element2 tap];
+    [app/*@START_MENU_TOKEN@*/.staticTexts[@"Get Offers"]/*[[".buttons[@\"Get Offers\"].staticTexts[@\"Get Offers\"]",".staticTexts[@\"Get Offers\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/ tap];
+    
+    XCUIElement *starzplayOriginalSeriesMoviesStaticText = app.tables/*@START_MENU_TOKEN@*/.staticTexts[@"STARZPLAY Original Series + Movies"]/*[[".cells.staticTexts[@\"STARZPLAY Original Series + Movies\"]",".staticTexts[@\"STARZPLAY Original Series + Movies\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/;
+    [starzplayOriginalSeriesMoviesStaticText tap];
+    [starzplayOriginalSeriesMoviesStaticText swipeDown];
+    
 }
+
 
 - (void)testLaunchPerformance {
     if (@available(macOS 10.15, iOS 13.0, tvOS 13.0, *)) {
