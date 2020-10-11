@@ -21,6 +21,8 @@
 		8A379BCB253314C20022307C /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379BCA253314C20022307C /* OffersViewController.m */; };
 		8AE9884A2533305600BE6952 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988492533305600BE6952 /* Offer.m */; };
 		8AE988722533426500BE6952 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988712533426500BE6952 /* NetworkManager.m */; };
+		8AE988E925337FDB00BE6952 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988E725337FDB00BE6952 /* TableViewCell.m */; };
+		8AE988EA25337FDB00BE6952 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE988E825337FDB00BE6952 /* TableViewCell.xib */; };
 		B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA8D46976DFB7CE046354B /* Pods_Offers.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,9 @@
 		8AE988492533305600BE6952 /* Offer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
 		8AE988702533426500BE6952 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		8AE988712533426500BE6952 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		8AE988E625337FDB00BE6952 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		8AE988E725337FDB00BE6952 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		8AE988E825337FDB00BE6952 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		AE9FF4B7C0F9B6A77C84E78E /* Pods-Offers-OffersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers-OffersUITests.debug.xcconfig"; path = "Target Support Files/Pods-Offers-OffersUITests/Pods-Offers-OffersUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C98BCD7D136D34A83D170575 /* Pods-Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Offers.debug.xcconfig"; path = "Target Support Files/Pods-Offers/Pods-Offers.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7C0758EB88A2361ECA5C71 /* Pods-OffersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OffersTests.debug.xcconfig"; path = "Target Support Files/Pods-OffersTests/Pods-OffersTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +205,9 @@
 		8A379B862531F80F0022307C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8AE988E625337FDB00BE6952 /* TableViewCell.h */,
+				8AE988E725337FDB00BE6952 /* TableViewCell.m */,
+				8AE988E825337FDB00BE6952 /* TableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A379B5D2531F69D0022307C /* LaunchScreen.storyboard in Resources */,
+				8AE988EA25337FDB00BE6952 /* TableViewCell.xib in Resources */,
 				8A379B5A2531F69D0022307C /* Assets.xcassets in Resources */,
 				8A379B582531F69B0022307C /* Main.storyboard in Resources */,
 			);
@@ -466,6 +475,7 @@
 				8A379BCB253314C20022307C /* OffersViewController.m in Sources */,
 				8A379B4F2531F69B0022307C /* AppDelegate.m in Sources */,
 				8A379B602531F69D0022307C /* main.m in Sources */,
+				8AE988E925337FDB00BE6952 /* TableViewCell.m in Sources */,
 				8A379B522531F69B0022307C /* SceneDelegate.m in Sources */,
 				8A379B9C253207930022307C /* ViewController.m in Sources */,
 			);

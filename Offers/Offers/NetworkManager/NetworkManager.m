@@ -14,8 +14,6 @@
 
 @implementation NetworkManager
 
-
-
 - (instancetype)init
 {
     self = [super init];
@@ -34,6 +32,7 @@
 
 
 -(void) loadData:(NSString *)aID userID:(NSString *) uId token:(NSString *) token completionHandler: (void (^)(NSArray<Offer *> * offers)) completionHandler {
+    
     NSMutableArray<Offer *> *offers = NSMutableArray.new;
     self.appId = [NSString stringWithFormat:@"%s%@", "appid=", aID];
     self.userId = [NSString stringWithFormat:@"%s%@", "&uid=", uId];
@@ -46,32 +45,45 @@
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setHTTPMethod:@"GET"];
     [request setURL:[NSURL URLWithString:self.url]];
-
+    
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:
       ^(NSData * _Nullable data,
         NSURLResponse * _Nullable response,
         NSError * _Nullable error) {
 
-        NSError *err;
-        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+        NSDictionary* headers = [(NSHTTPURLResponse *)response allHeaderFields];
+        NSString *responseSignature = headers[@"x-sponsorpay-response-signature"];
+    
+        NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSString *responseBodyWithApiKey = [NSString stringWithFormat:@"%@%@", str, @"1c915e3b5d42d05136185030892fbb846c278927"];
+        NSString *expectedSignature = [responseBodyWithApiKey SHA1];
+    
+        if ([responseSignature isEqualToString:expectedSignature]) {
+            NSLog(@"Data recieved from the API has correct signature");
+            NSError *err;
+            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&err];
+            
+            if (err) {
+                NSLog(@"Failed to serialoze JSON: %@",err);
+                NSArray<Offer *> *empty = [NSArray new];
+                completionHandler(empty);
+                return;
+            }
 
-        if (err) {
-            NSLog(@"Failed to serialoze JSON: %@",err);
-            NSArray<Offer *> *empty = [NSArray new];
-            completionHandler(empty);
-            return;
-        }
-
-        NSDictionary *offersJSON = json[@"offers"];
-
-        for (NSDictionary *offer in offersJSON) {
-            Offer *o = Offer.new;
-            o.title = offer[@"title"];
-            o.imageUrl = offer[@"thumbnail"][@"lowres"];
-            [offers addObject:o];
+            NSDictionary *offersJSON = json[@"offers"];
+            
+            for (NSDictionary *offer in offersJSON) {
+                Offer *o = Offer.new;
+                o.title = offer[@"title"];
+                o.imageUrl = offer[@"thumbnail"][@"lowres"];
+                [offers addObject:o];
+            }
+            
+            completionHandler(offers);
+        } else {
+            NSLog(@"Data recieved from the API is corrupted");
         }
         
-        completionHandler(offers);
     }] resume];
 
 }
