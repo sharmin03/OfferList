@@ -26,15 +26,25 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    // To show when waiting for the data to be loaded
     [self.activityIndicator setHidden:YES];
 }
 
 - (IBAction)getOffersButtonTap:(id)sender {
     [self.activityIndicator setHidden:NO];
     [self.activityIndicator startAnimating];
+    
+    // removing white spaces from the texts
+    NSString *appId = [self.appIdTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];;
+    NSString *userId = [self.userIdTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *token = [NSString stringWithFormat:@"%s%@", "&", [self.securityTokenTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    
     NetworkManager *nw =  [[NetworkManager alloc] init];
     
-    [nw loadData:@"2070" userID:@"superman" token:@"&1c915e3b5d42d05136185030892fbb846c278927" completionHandler:^(NSArray<Offer *> * _Nonnull offers) {
+    //Loading the data on button tap
+    [nw loadData:appId userID:userId token:@"&1c915e3b5d42d05136185030892fbb846c278927" completionHandler:^(NSArray<Offer *> * _Nonnull offers) {
+        
+        //Preventing the UI from freezing
         dispatch_async(dispatch_get_main_queue(), ^{
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OffersViewController *offersVC = [storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"];

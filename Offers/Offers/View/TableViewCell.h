@@ -9,6 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//MARK:- I would have coded this class for a complicated table view cell. I have only created this class to completely show how an MVC would look in a bigger app. :)
+
 @interface TableViewCell : UITableViewCell
 
 @end
