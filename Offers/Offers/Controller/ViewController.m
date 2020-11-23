@@ -49,10 +49,12 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             OffersViewController *offersVC = [storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"];
+            UINavigationController *navBar=[[UINavigationController alloc]initWithRootViewController:offersVC];
             offersVC.offers = offers;
             [self.activityIndicator stopAnimating];
             [self.activityIndicator setHidden:YES];
-            [self presentViewController:offersVC animated:YES completion:nil];
+            [self.navigationController presentModalViewController:navBar animated:YES];
+//            [self presentViewController:offersVC animated:YES completion:nil];
         });
     }];
 

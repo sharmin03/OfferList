@@ -136,6 +136,7 @@
 		8A379B412531F69B0022307C = {
 			isa = PBXGroup;
 			children = (
+				8A81074E256BD81A00070BF8 /* Dependencies */,
 				8A379B4C2531F69B0022307C /* Offers */,
 				8A379B682531F69D0022307C /* OffersTests */,
 				8A379B732531F69D0022307C /* OffersUITests */,
@@ -230,6 +231,13 @@
 				8AE988712533426500BE6952 /* NetworkManager.m */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		8A81074E256BD81A00070BF8 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
