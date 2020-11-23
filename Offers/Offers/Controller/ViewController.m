@@ -55,7 +55,7 @@
             offersVC.delegate = self;
             [self.activityIndicator stopAnimating];
             [self.activityIndicator setHidden:YES];
-            [self.navigationController presentModalViewController:navBar animated:YES];
+            [self.navigationController presentViewController:navBar animated:YES completion:nil];
         });
     }];
 
