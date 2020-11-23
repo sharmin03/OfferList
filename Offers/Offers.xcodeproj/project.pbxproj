@@ -18,9 +18,8 @@
 		8A379B6A2531F69D0022307C /* OffersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B692531F69D0022307C /* OffersTests.m */; };
 		8A379B752531F69D0022307C /* OffersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B742531F69D0022307C /* OffersUITests.m */; };
 		8A379B9C253207930022307C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379B9A253207930022307C /* ViewController.m */; };
-		8A379BCB253314C20022307C /* OffersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A379BCA253314C20022307C /* OffersViewController.m */; };
-		8AE9884A2533305600BE6952 /* Offer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988492533305600BE6952 /* Offer.m */; };
-		8AE988722533426500BE6952 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988712533426500BE6952 /* NetworkManager.m */; };
+		8A8107C4256BDCBE00070BF8 /* OfferListSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8107BC256BDC8900070BF8 /* OfferListSDK.framework */; };
+		8A8107C5256BDCBE00070BF8 /* OfferListSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8107BC256BDC8900070BF8 /* OfferListSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8AE988E925337FDB00BE6952 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE988E725337FDB00BE6952 /* TableViewCell.m */; };
 		8AE988EA25337FDB00BE6952 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AE988E825337FDB00BE6952 /* TableViewCell.xib */; };
 		B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA8D46976DFB7CE046354B /* Pods_Offers.framework */; };
@@ -41,7 +40,45 @@
 			remoteGlobalIDString = 8A379B492531F69B0022307C;
 			remoteInfo = Offers;
 		};
+		8A8107BB256BDC8900070BF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8107B6256BDC8900070BF8 /* OfferListSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A810762256BD9C800070BF8;
+			remoteInfo = OfferListSDK;
+		};
+		8A8107BD256BDC8900070BF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A8107B6256BDC8900070BF8 /* OfferListSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A81076B256BD9C900070BF8;
+			remoteInfo = OfferListSDKTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A8107C6256BDCBE00070BF8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8A8107C5256BDCBE00070BF8 /* OfferListSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A810802256BE0A600070BF8 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		10CA8080FDED470C41F27897 /* Pods_Offers_OffersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Offers_OffersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +105,7 @@
 		8A379B762531F69D0022307C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A379B9A253207930022307C /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A379B9B253207930022307C /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A379BCA253314C20022307C /* OffersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OffersViewController.m; sourceTree = "<group>"; };
-		8A379BCF253314D50022307C /* OffersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OffersViewController.h; sourceTree = "<group>"; };
-		8AE988482533305600BE6952 /* Offer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Offer.h; sourceTree = "<group>"; };
-		8AE988492533305600BE6952 /* Offer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Offer.m; sourceTree = "<group>"; };
-		8AE988702533426500BE6952 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		8AE988712533426500BE6952 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		8A8107B6256BDC8900070BF8 /* OfferListSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OfferListSDK.xcodeproj; path = ../../../OfferListSDK/OfferListSDK.xcodeproj; sourceTree = "<group>"; };
 		8AE988E625337FDB00BE6952 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		8AE988E725337FDB00BE6952 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		8AE988E825337FDB00BE6952 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
@@ -87,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A8107C4256BDCBE00070BF8 /* OfferListSDK.framework in Frameworks */,
 				B05ADC16BF1A6085B1D1C745 /* Pods_Offers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,10 +192,8 @@
 		8A379B4C2531F69B0022307C /* Offers */ = {
 			isa = PBXGroup;
 			children = (
-				8A379BA025320CD10022307C /* NetworkManager */,
 				8A379B872531F8150022307C /* Controller */,
 				8A379B862531F80F0022307C /* View */,
-				8A379B852531F8050022307C /* Model */,
 				8A379B4D2531F69B0022307C /* AppDelegate.h */,
 				8A379B4E2531F69B0022307C /* AppDelegate.m */,
 				8A379B502531F69B0022307C /* SceneDelegate.h */,
@@ -194,15 +225,6 @@
 			path = OffersUITests;
 			sourceTree = "<group>";
 		};
-		8A379B852531F8050022307C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8AE988482533305600BE6952 /* Offer.h */,
-				8AE988492533305600BE6952 /* Offer.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8A379B862531F80F0022307C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,26 +240,25 @@
 			children = (
 				8A379B9B253207930022307C /* ViewController.h */,
 				8A379B9A253207930022307C /* ViewController.m */,
-				8A379BCF253314D50022307C /* OffersViewController.h */,
-				8A379BCA253314C20022307C /* OffersViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		8A379BA025320CD10022307C /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				8AE988702533426500BE6952 /* NetworkManager.h */,
-				8AE988712533426500BE6952 /* NetworkManager.m */,
-			);
-			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		8A81074E256BD81A00070BF8 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				8A8107B6256BDC8900070BF8 /* OfferListSDK.xcodeproj */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		8A8107B7256BDC8900070BF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A8107BC256BDC8900070BF8 /* OfferListSDK.framework */,
+				8A8107BE256BDC8900070BF8 /* OfferListSDKTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +273,8 @@
 				8A379B472531F69B0022307C /* Frameworks */,
 				8A379B482531F69B0022307C /* Resources */,
 				B027AC29B6AC250DB5E4780F /* [CP] Embed Pods Frameworks */,
+				8A8107C6256BDCBE00070BF8 /* Embed Frameworks */,
+				8A810802256BE0A600070BF8 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,6 +356,12 @@
 			mainGroup = 8A379B412531F69B0022307C;
 			productRefGroup = 8A379B4B2531F69B0022307C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A8107B7256BDC8900070BF8 /* Products */;
+					ProjectRef = 8A8107B6256BDC8900070BF8 /* OfferListSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8A379B492531F69B0022307C /* Offers */,
@@ -341,6 +370,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8A8107BC256BDC8900070BF8 /* OfferListSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OfferListSDK.framework;
+			remoteRef = 8A8107BB256BDC8900070BF8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A8107BE256BDC8900070BF8 /* OfferListSDKTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OfferListSDKTests.xctest;
+			remoteRef = 8A8107BD256BDC8900070BF8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8A379B482531F69B0022307C /* Resources */ = {
@@ -478,9 +524,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AE9884A2533305600BE6952 /* Offer.m in Sources */,
-				8AE988722533426500BE6952 /* NetworkManager.m in Sources */,
-				8A379BCB253314C20022307C /* OffersViewController.m in Sources */,
 				8A379B4F2531F69B0022307C /* AppDelegate.m in Sources */,
 				8A379B602531F69D0022307C /* main.m in Sources */,
 				8AE988E925337FDB00BE6952 /* TableViewCell.m in Sources */,

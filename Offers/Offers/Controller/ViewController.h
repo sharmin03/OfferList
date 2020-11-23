@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Offer.h"
-@interface ViewController : UIViewController
+#import <OfferListSDK/Offer.h>
+#import <OfferListSDK/OffersViewController.h>
+@interface ViewController : UIViewController <OffersViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *appIdTextField;
 @property (weak, nonatomic) IBOutlet UITextField *userIdTextField;

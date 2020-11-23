@@ -10,8 +10,9 @@
 #import <AdSupport/ASIdentifierManager.h>
 #import <NSHash/NSString+NSHash.h>
 #import <NSHash/NSData+NSHash.h>
-#import "Offer.h"
-#import "NetworkManager.h"
+#import <OfferListSDK/Offer.h>
+#import <OfferListSDK/NetworkManager.h>
+#import <OfferListSDK/OffersViewController.h>
 
 @interface ViewController ()
 
@@ -51,10 +52,10 @@
             OffersViewController *offersVC = [storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"];
             UINavigationController *navBar=[[UINavigationController alloc]initWithRootViewController:offersVC];
             offersVC.offers = offers;
+            offersVC.delegate = self;
             [self.activityIndicator stopAnimating];
             [self.activityIndicator setHidden:YES];
             [self.navigationController presentModalViewController:navBar animated:YES];
-//            [self presentViewController:offersVC animated:YES completion:nil];
         });
     }];
 
@@ -65,4 +66,10 @@
     [_userIdTextField resignFirstResponder];
     [_securityTokenTextField resignFirstResponder];
 }
+- (void)dismissOffersVC {
+    NSLog(@"notification of cell tap or close button tap");
+}
+
+
+
 @end
