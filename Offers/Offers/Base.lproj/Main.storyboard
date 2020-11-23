@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dcp-5H-ayR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dcp-5H-ayR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="79.6875"/>
         </scene>
-        <!--Offers View Controller-->
+        <!--Offer Wall-->
         <scene sceneID="jFB-MB-hCc">
             <objects>
-                <tableViewController storyboardIdentifier="OffersViewController" id="aRy-RE-U3d" customClass="OffersViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="OffersViewController" modalPresentationStyle="fullScreen" id="aRy-RE-U3d" customClass="OffersViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZP9-tb-VDI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,10 +130,11 @@
                             <outlet property="delegate" destination="aRy-RE-U3d" id="6cX-JT-VH5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Offer Wall" id="EJE-Nu-E2K"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhX-gj-6De" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734.7826086956522" y="79.6875"/>
+            <point key="canvasLocation" x="2644.9275362318845" y="79.6875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Ek-Lf-4PY">
@@ -152,6 +153,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCq-aI-EkA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.623188405797109" y="79.6875"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v2U-vo-xYM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZI4-27-73p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VVa-Wv-4tb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aRy-RE-U3d" kind="relationship" relationship="rootViewController" id="cej-Hj-HJ4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfe-HH-1Fq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1734.7826086956522" y="79.6875"/>
         </scene>
     </scenes>
     <resources>

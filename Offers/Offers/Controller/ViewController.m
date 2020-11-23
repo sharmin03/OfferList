@@ -43,7 +43,7 @@
     
     //Loading the data on button tap
     //It is difficult to enter such long api token with keyboard so I passed it as a static string
-    [nw loadData:appId userID:userId token:@"&1c915e3b5d42d05136185030892fbb846c278927" completionHandler:^(NSArray<Offer *> * _Nonnull offers) {
+    [nw loadData:@"2070" userID:@"superman" token:@"&1c915e3b5d42d05136185030892fbb846c278927" completionHandler:^(NSArray<Offer *> * _Nonnull offers) {
         
         //Preventing the UI from freezing
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -51,7 +51,8 @@
             OffersViewController *offersVC = [storyboard instantiateViewControllerWithIdentifier:@"OffersViewController"];
             offersVC.offers = offers;
             [self.activityIndicator stopAnimating];
-            [self showViewController:offersVC sender:nil];
+            [self.activityIndicator setHidden:YES];
+            [self presentViewController:offersVC animated:YES completion:nil];
         });
     }];
 
